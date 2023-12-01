@@ -6,7 +6,7 @@ All the elements resulting from the digitalization process (for example watermar
 <img src="Images_annotation/Le_Prince_Dgem_chronique_dauphinoise_-----Arnaud_Victor_bpt6k5468703r_11.jpeg.png" width="400"/>
 <img src="Images_annotation/bpt6k1092529g_f14.jpg" width="400"/>
 </p>
-The digitalizationartefactZone is in orange.
+The digitalizationartefactZone is in orange.</br>
 Right: Le_Prince_Dgem_chronique_dauphinoise_-----Arnaud_Victor_bpt6k5468703r_11.jpeg </br>
 Left: bpt6k1092529g_f14.jpg
 
@@ -132,7 +132,7 @@ A (complete or abbreviated) title outside of the main text, usually placed at th
 <p class="float" align="center">
  <img src="Images_annotation/bpt6k10981259_f27.jpg" width="400"/>
 </p>
-RunningTitleZone is in pink.
+RunningTitleZone is in pink.</br>
 Example: bpt6k10981259_f27.jpg
 
 ## StampZone
