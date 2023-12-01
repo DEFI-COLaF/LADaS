@@ -101,52 +101,57 @@ A handwritten margin note.
 ## MarginTextZone:Notes, MarginTextZone:Notes#Continued
 
 Footnotes and Margin Notes (not separated invidually). MarginTextZone:Notes#Continued is used when there are multiple columns of notes on the page.
+<p class="float" align="center">
+ <img src="Images_annotation/bd6t53717102_f63.jpg" width="400"/>
+</p>
 
-
-Fichier exemple : bd6t53717102_f63.jpg
+Example: bd6t53717102_f63.jpg
 
 ## NumberingZone
 
-Un numéro de page
+Page Number
 
 ## PageTitleZone
 
-Un ensemble de segments de texte formant une page de titre qui n’est pas comprise dans le corps du texte.
+A group of text segments creating a title page not contained in the mainZone.
 
+<p class="float" align="center">
+ <img src="Images_annotation/bd6t5372200f_f3.jpg" width="400"/>
+</p>
 
+Example: bd6t5372200f_f3.jpg
 
-Fichier exemple : bd6t5372200f_f3.jpg
-PageTitleZone:Index
-
-Un index ou sommaire
+## PageTitleZone:Index
+Table of contents
 
 ## QuireMarkZone
 
 ## RunningTitleZone
 
-Un titre (complet ou abrégé) en dehors du corps du texte, majoritairement placé en haut de page.
-
-
-Fichier exemple : bpt6k10981259_f27.jpg
+A (complete or abbreviated) title outside of the main text, usually placed at the top of the page.
+<p class="float" align="center">
+ <img src="Images_annotation/bpt6k10981259_f27.jpg" width="400"/>
+</p>
+RunningTitleZone is in pink.
+Example: bpt6k10981259_f27.jpg
 
 ## StampZone
 
 
 ## StampZone:Sticker
 
-Un sticker identifiant le livre (généralement avec un côte)
+A sticker identifying the book (usually with a code)
 
 ## TableZone
 
-Une table, légende inclue. Comprend toute forme graphique reproduisant un système de colonne et de lignes, y compris sans bordure.
-
-Si du texte est exclu de la forme graphique du tableau mais appartient à celui-ci, l’inclure dans la TableZone. 
-
-
-Fichier exemple : bd6t53701166_f31.jpg
+A table, caption included. It should contain all the table.
+If there is some text not contained by the graphical form of the table but it is appart of the table, include it in the tableZone.
+<p class="float" align="center">
+ <img src="Images_annotation/bd6t53701166_f31.jpg" width="400"/>
+</p>
+Example : bd6t53701166_f31.jpg
 
 ## TableZone:Legend
-
-La légende table
+The caption of the table
 
 
