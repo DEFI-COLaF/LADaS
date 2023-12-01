@@ -2,103 +2,105 @@
 
 ## DigitizationArtefactZone
 All the elements resulting from the digitalization process (for example watermarks of the institution preserving the document)
-
- Le_Prince_Dgem_chronique_dauphinoise_-----Arnaud_Victor_bpt6k5468703r_11.jpeg
-
-
-
-Fichier exemple : bpt6k1092529g_f14.jpg
+<p class="float" align="center">
+<img src="Images_annotation/Le_Prince_Dgem_chronique_dauphinoise_-----Arnaud_Victor_bpt6k5468703r_11.jpeg.png" width="400"/>
+<img src="Images_annotation/bpt6k1092529g_f14.jpg" width="400"/>
+</p>
+The digitalizationartefactZone is in orange.
+Right: Le_Prince_Dgem_chronique_dauphinoise_-----Arnaud_Victor_bpt6k5468703r_11.jpeg </br>
+Left: bpt6k1092529g_f14.jpg
 
 ## DropCapitalZone
 
 ## GraphicZone
-
-Inclut toute la figure (photographie, schéma, dessin) et légende.
+Include all the figure (photography, graph, drawing) and its caption.
 
 ## GraphicZone:Decoration
-
-## Un tampon ou un élément graphique servant à décorer le texte, généralement pour séparer deux éléments.
+Graphical element decorating the text, such as separator ornament.
 
 ## GraphicZone:Legend
-
-La légende d'une GraphicZone.
+GraphicZone's Caption
 
 ## GraphicZone:Maths
+Mathematical Formula separated from the main text. This doesn't apply to formula within the text. A GraphicZoneMaths can be associated with a GraphicZone:Legend.
 
-Une formule mathématique à part du corps du texte (et non au milieu d'une ligne d'un paragraphe).
+<p class="float" align="center">
+ <img src="Images_annotation/bpt6k1421246p_f358.jpg" width="400"/>
+</p>
+Example: bpt6k1421246p_f358.jpg
 
-Une GraphicZoneMaths peut être accompagnée d’une GraphicZone:Legend.
+Geometric Illustration are not GraphicZone:Maths but rather simple GraphicZone.
 
-
-Fichier exemple :  bpt6k1421246p_f358.jpg
-
-Une GraphicZone:Maths ne peut pas être une illustration type géométrie : 
-
-
-Fichier exemple :  bd6t5371525p_f68.jpg
+<p class="float" align="center">
+ <img src="Images_annotation/bd6t5371525p_f68.jpg" width="400"/>
+</p>
+Example :  bd6t5371525p_f68.jpg
 
 ## GraphicZone:P
-Un paragraphe intégré dans une illustration et qui n’est pas une légende. Généralement un commentaire ou une explication en lien avec l’illustration avec lequel la GraphicZone:P est lié. 
-Quand cela est possible, intégrer la GraphicZone:P dans la GraphicZone principale.
+Text in an illustration which is not a caption. Usually a commentary and explanation on the illustration. When it is possible, the graphicZone:P is included in the principle GraphiZone.
 
-Fichier exemple : bd6t53682106_f109.jpg
-MainZone:Date
+<p class="float" align="center">
+ <img src="Images_annotation/bd6t53682106_f109.jpg" width="400"/>
+</p>
+Example : bd6t53682106_f109.jpg
 
-Une date dans une correspondance ou un article. Attention, la date doit être reconnaissable par sa position "géographique", et non son contenu textuel.
+## MainZone:Date
+A date in a correspondance or an article. The date should be visually recognizable due to its geographical position in the page rather than its meaning.
 
-MainZone:Entry, MainZone:Entry#Continued
+## MainZone:Entry, MainZone:Entry#Continued
+A catalogue's entry. Graphically, an entry is usually defined by a typographic elements (italic, bold) and a structuration (alphabetical, numerical..).
 
-Une entrée de catalogue. Graphiquement, une entrée est généralement définie par un artifice typographique (gras, italique) et d'un ordonnancement (alphabétique, numérique, etc.).
-
-
-Fichier exemple : bd6t5369916x_f31.jpg
+<p class="float" align="center">
+ <img src="Images_annotation/bd6t5369916x_f31.jpg" width="400"/>
+</p>
+Example : bd6t5369916x_f31.jpg
 
 ## MainZone:Form
 
-Un formulaire
+A form.
 
 ## MainZone:Head
 
-Un ent-tête séparé du reste du texte
-Une MainZone:Head ne peut pas être superposé avec une MainZone:P et #Continued.
+A header separated from the rest of the text.
+A MainZone:Head should not overlap with a MainZone:P or MainZone:P#Continued.
 
 ## MainZone:Lg, MainZone:Lg#Continued
 
-Un ensemble de vers
+A group of verses lines.
 
 ## MainZone:List, MainZone:List#Continued
 
-Un élément d'une liste.
+A list item. MainZone:List#Continued allows to annotate a liste item that begin on another page or was interrupted.
 
- MainZone:List#Continued permet d’annoter un élément de liste commencé sur une autre page, ou interrompu dans la page.
+<p class="float" align="center">
+ <img src="Images_annotation/bd6t53771507_f86.jpg" width="400"/>
+</p>
+Example : bd6t53771507_f86.jpg
 
-
-Fichier exemple : bd6t53771507_f86.jpg
 ## MainZone:Other
 
-Tout truc qui passe pas dans le reste
+When none of the mainZone can be used.
 
 ## MainZone:P, MainZone:P#Continued
 
-Paragraphe de texte classique.
+A normal paragraph of text. MainZone:P and MainZone:P#Continued should not overlap with a MainZone:Head.
 
-Une MainZone:P et #Continued ne peut pas être superposé avec une MainZone:Head.
 
 ## MainZone:Signature
 
-Une signature (nom d'auteur par exemple dans une correspondance)
+A signature (For example, in a correspondance, the authors' name). It should be graphically separated from the rest of the text.
 
 ## MainZone:Sp, MainZone:Sp#Continued
 
-Un élément de dialogue pour le théâtre (principalement). Graphiquement, l'élément représentant le nom du speaker doit être visible, une didascalie peut être inclue, et un élément graphique doit séparer le nom du speaker du texte dit.
+A dialog element, mostly for theatre. It must contain the speaker's name, stage directions and a graphical element separating the speaker's name from his speech.
 
 ## MarginTextZone:ManuscriptAddendum
 
-Une note marginale manuscrite
+A handwritten margin note.
 
 ## MarginTextZone:Notes, MarginTextZone:Notes#Continued
 
-Un ensemble de notes (non séparées individuellement). Si en plusieurs colonnes, utiliser #continued pour la deuxième colonne.
+Footnotes and Margin Notes (not separated invidually). MarginTextZone:Notes#Continued is used when there are multiple columns of notes on the page.
 
 
 Fichier exemple : bd6t53717102_f63.jpg
