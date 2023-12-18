@@ -22,6 +22,12 @@ western academic languages.
 Label Annotation have been conducted using the [SegmOnto](https://segmonto.github.io/) vocabulary. 
 An annotation guide is available [here](AnnotationGuide.md).
 
+### More details about some subsets
+
+![./figures/corpus.png](./figures/corpus.png)
+
+*Last update of the plot: 15/12/2023*
+
 ## Structure
 
 The data can be found in `./data`. Each subset is present in its own subset folder if you want to train cross-genre.
