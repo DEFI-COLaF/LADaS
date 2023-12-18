@@ -1,7 +1,7 @@
 # Annotation Guide
 
 ## DigitizationArtefactZone
-All the elements resulting from the digitalization process (for example watermarks of the institution preserving the document)
+All the elements resulting from the digitalization process (for example watermarks of the institution preserving the document or fingers)
 <p class="float" align="center">
 <img src="Images_annotation/Le_Prince_Dgem_chronique_dauphinoise_-----Arnaud_Victor_bpt6k5468703r_11.jpeg.png" width="400"/>
 <img src="Images_annotation/bpt6k1092529g_f14.jpg" width="400"/>
@@ -12,14 +12,34 @@ Left: bpt6k1092529g_f14.jpg
 
 ## DropCapitalZone
 
+A `DropCapitalZone` is used for initial letters that takes more than the size of one line, specifically if this clearly modifies
+the overall layout.
+
 ## GraphicZone
-Include all the figure (photography, graph, drawing) and its caption.
+Include all the figure (photography, plot, drawing) and its caption.
+
+## GraphicZone:Part
+
+A graphic element (photography, plot, etc.) defined as one of the two following options:
+
+1. a sub-element of a `GraphicZone` containing at least one graphic (picture, schema, plot, etc.) and one element identifying it as a part of a whole (a `GraphicZone:FigDesc` or a `NumberingZone`)
+2. a sub-element of a `TableZone`
 
 ## GraphicZone:Decoration
 Graphical element decorating the text, such as separator ornament.
 
-## GraphicZone:Legend
-GraphicZone's Caption
+## GraphicZone:Head
+
+`GraphicZone`'s main caption (usually, in scientific paper, the part preceded by `Figure X:`)
+
+## GraphicZone:FigDesc
+
+`GraphicZone`'s secondaries captions. 
+
+A `GraphicZone:FigDesc` can only be present if a `GraphicZone:Head` has already been used.
+
+A `GraphicZone:FigDesc` encompasses secondary explanation (usually a small paragraph below a `GraphicZone:Head`) or serves as names
+for Part of the `GraphicZone` (a figure with two different plot and two plot titles on top of the main caption).
 
 ## GraphicZone:Maths
 Mathematical Formula separated from the main text. This doesn't apply to formula within the text. A GraphicZoneMaths can be associated with a GraphicZone:Legend.
@@ -36,7 +56,8 @@ Geometric Illustration are not GraphicZone:Maths but rather simple GraphicZone.
 </p>
 Example :  bd6t5371525p_f68.jpg
 
-## GraphicZone:P
+## GraphicZone:TextualContent
+
 Text in an illustration which is not a caption. Usually a commentary and explanation on the illustration. When it is possible, the graphicZone:P is included in the principle GraphiZone.
 
 <p class="float" align="center">
