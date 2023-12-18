@@ -2,8 +2,9 @@
 
 [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
 
-LADaS, created by the [ALMANaCH team-project](https://almanach.inria.fr/index-en.html) at Inria, is a 
-multidocuments diachronic layout analysis dataset. This dataset includes:
+LADaS, created by the [ALMANaCH team-project](https://almanach.inria.fr/index-en.html) at Inria,
+continued in partnership with other researchers, is a multidocuments diachronic layout analysis 
+dataset. This dataset includes:
 
 - Monographs from the Bibliothèque Nationale de France (17th century - today);
 - PhD Thesis, in various fields (not only STEM, 20th-21st century);
