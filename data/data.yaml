@@ -1,0 +1,47 @@
+names:
+- DigitizationArtefactZone
+- DropCapitalZone
+- GraphicZone
+- GraphicZone-Decoration
+- GraphicZone-FigDesc
+- GraphicZone-Head
+- GraphicZone-Maths
+- GraphicZone-Part
+- GraphicZone-TextualContent
+- MainZone-Date
+- MainZone-Entry
+- MainZone-Entry-Continued
+- MainZone-Form
+- MainZone-Head
+- MainZone-Lg
+- MainZone-Lg-Continued
+- MainZone-List
+- MainZone-List-Continued
+- MainZone-Other
+- MainZone-P
+- MainZone-P-Continued
+- MainZone-Signature
+- MainZone-Sp
+- MainZone-Sp-Continued
+- MarginTextZone-ManuscriptAddendum
+- MarginTextZone-Notes
+- MarginTextZone-Notes-Continued
+- NumberingZone
+- PageTitleZone
+- PageTitleZone-Index
+- QuireMarkZone
+- RunningTitleZone
+- StampZone
+- StampZone-Sticker
+- TableZone
+- TableZone-Head
+nc: 36
+roboflow:
+  license: CC BY 4.0
+  project: segmonto
+  url: https://universe.roboflow.com/colaftextes/segmonto/dataset/25
+  version: 25
+  workspace: colaftextes
+test: ../test/images
+train: data/train/images
+val: data/valid/images
