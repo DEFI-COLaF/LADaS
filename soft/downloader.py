@@ -11,7 +11,7 @@ def download():
 
     REQ = {
         "COLAF": 25,
-        "DATACATALOGUE": 7
+        "DATACATALOGUE": 8
     }
 
     # raise Exception
