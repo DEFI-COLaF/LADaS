@@ -34,7 +34,9 @@ def detect_subset(path) -> Tuple[str, bool]:
     """
     bname = os.path.basename(path)
     if "data-colaf" in path:
-        if bname.startswith("finger"):
+        if bname.startswith("magazineJV"):
+            return "magazine-tech", False
+        elif bname.startswith("finger"):
             return "fingers", False
         elif re.match("^(bpt6|bd6t).*$", bname):
             return "monographies", False
@@ -96,7 +98,8 @@ def parse_classes(folder: str) -> Tuple[str, ...]:
 
 if __name__ == "__main__":
     OTHER_MAP = {
-        'MainZone-CatalogueDesc': "MainZone-P"
+        'MainZone-CatalogueDesc': "MainZone-P",
+        'MainZone-P-CatalogueDesc': "MainZone-P"
     }
     shutil.copy2(rel_path("data-colaf/data.yaml"), rel_path("data/data.yaml"))
     YAML_MAP = {

@@ -1,6 +1,10 @@
 names:
+- AdvertisementZone
 - DigitizationArtefactZone
 - DropCapitalZone
+- FigureZone
+- FigureZone-FigDesc
+- FigureZone-Head
 - GraphicZone
 - GraphicZone-Decoration
 - GraphicZone-FigDesc
@@ -34,14 +38,15 @@ names:
 - StampZone
 - StampZone-Sticker
 - TableZone
+- TableZone-Continued
 - TableZone-Head
-nc: 36
+nc: 41
 roboflow:
   license: CC BY 4.0
   project: segmonto
-  url: https://universe.roboflow.com/colaftextes/segmonto/dataset/25
-  version: 25
+  url: https://universe.roboflow.com/colaftextes/segmonto/dataset/26
+  version: 26
   workspace: colaftextes
 test: ../test/images
-train: data/train/images
-val: data/valid/images
+train: /home/thibault/dev/LADaS/soft/../data-colaf/train/images
+val: /home/thibault/dev/LADaS/soft/../data-colaf/valid/images
