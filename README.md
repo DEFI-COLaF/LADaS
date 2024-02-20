@@ -1,6 +1,6 @@
 # Layout Analysis Dataset with SegmOnto (LADaS)
 
-[![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/726002822.svg)](https://zenodo.org/doi/10.5281/zenodo.10682623) [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
 
 LADaS, created by the [ALMANaCH team-project](https://almanach.inria.fr/index-en.html) at Inria,
 continued in partnership with other researchers, is a multidocuments diachronic layout analysis 
@@ -11,6 +11,7 @@ dataset. This dataset includes:
 - Selling Catalogs (for manuscripts and art pieces), in various fields (18th-20th century);
 - Noisy digitization (with fingers for example, 20th-21st century);
 - Academic papers (mostly Humanities and Social Sciences) (19th-21st century);
+- Magazines about technologies and video games, from 1920s to 2010;
 - Misc stuff found here and there.
 
 The data are in YoloV8 txt format (class center_x center_y width height).
@@ -33,7 +34,7 @@ An annotation guide is available [here](AnnotationGuide.md).
 
 The data can be found in `./data`. Each subset is present in its own subset folder if you want to train cross-genre.
 
-A script, `unify.sh` allows for having a single directory with train/dev/test folders for Roboflow training.
+A script, `collate.sh` allows for having a single directory with train/dev/test folders for YoloV8 training.
 
 ## Licence
 
