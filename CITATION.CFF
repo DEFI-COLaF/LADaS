@@ -36,6 +36,8 @@ authors:
     family-names: Sagot
     affiliation: 'ALMAnaCH, Inria'
     orcid: 'https://orcid.org/0000-0002-0107-8526'
+  - given-names: Roxane
+    family-names: Bougrelle
 identifiers:
   - type: url
     value: 'https://github.com/DEFI-COLaF/LADaS'
