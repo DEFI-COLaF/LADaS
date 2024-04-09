@@ -1,23 +1,30 @@
 # Annotation Guide
 This annotation guide primarily incorporates [Segmonto guidelines](https://segmonto.github.io), with some adjustments made to align with our documents, particularly regarding the subtypes.
 
+## AdvertisementZone
+### 1.Definition
+AdvertisementZone: corresponds to the advertisement areas, specific to printed materials, that combine both images and texts with sales objectives.This zone has been added within the framework of the LADAS project to the Segmonto vocabulary in order to address areas that are not solely images or solely text, but rather combine both elements to the extent that they are generally difficult to separate. 
+### 2.Subtypes
+### 3.Examples
+
 ## DigitizationArtefactZone
 ### 1. Definition
 DigitalArtefactZone: contains any types of item external to the document itself present on the image because of the digitisation process.
-### 2. Examples
-<p class="float" align="center">
-<img src="Images_annotation/Le_Prince_Dgem_chronique_dauphinoise_-----Arnaud_Victor_bpt6k5468703r_11.jpeg.png" width="400"/>
-<img src="Images_annotation/bpt6k1092529g_f14.jpg" width="400"/>
-</p>
-The digitalizationartefactZone is in orange.</br>
-Right: Le_Prince_Dgem_chronique_dauphinoise_-----Arnaud_Victor_bpt6k5468703r_11.jpeg </br>
-Left: bpt6k1092529g_f14.jpg
+### 2. Subtypes
+### 3. Examples
+
 
 ## DropCapitalZone
-
 ### 1.Definition
 DropCapitalZone: contains any type of initial letter occupying a space corresponding to several lines of the main text or bearing  significant ornementation, be they historiated, ornated, flourished or painted initials (and excluding the following text line).
-### 2. Examples
+### 2.Subtypes
+### 3. Examples
+
+## FigureZone
+### 1.Definition
+FigureZone
+### 2.Subtypes
+### 3.Examples
 
 ## GraphicZone
 ### 1. Definition
@@ -114,9 +121,12 @@ Example: bd6t5372200f_f3.jpg
 QuireMarksZone: is a zone containing a quire signature (e.g. a ii), catchword, or any kind of element relative to the material organisation of the source, with the exclusion of page, folio, or item numbers. The zone usually is at the bottom of the page.
 ### 2.Subtypes
 ### 3.Examples
-## RunningTitleZone
 
-A (complete or abbreviated) title outside of the main text, usually placed at the top of the page.
+## RunningTitleZone
+### 1.Definition
+RunnningTitleZone: is a zone containing a running title, traditionally at the top of the page or of the double page. It can be the title (or the abbreviated title) of a document or of the current section.
+### 2. SubTypes
+### 3. Examples
 <p class="float" align="center">
  <img src="Images_annotation/bpt6k10981259_f27.jpg" width="400"/>
 </p>
@@ -136,7 +146,6 @@ TableZone: is a zone containing a table of any kind. The table can be clearly dr
 Caption should be included. If there is some text not contained by the graphical form of the table but it is appart of the table, include it in the tableZone.
 ### 2.Subtypes
    - TableZone:Legend: The caption of the table. Should be contained by the tableZone.
-
 ### 3.Examples
 <p class="float" align="center">
  <img src="Images_annotation/bd6t53701166_f31.jpg" width="400"/>
