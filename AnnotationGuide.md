@@ -5,58 +5,58 @@ This annotation guide primarily incorporates [Segmonto guidelines](https://segmo
 ### 1.Definition
 AdvertisementZone: corresponds to the advertisement areas, specific to printed materials, that combine both images and texts with sales objectives.This zone has been added within the framework of the LADAS project to the Segmonto vocabulary in order to address areas that are not solely images or solely text, but rather combine both elements to the extent that they are generally difficult to separate. 
 ### 2.Subtypes
+None
 ### 3.Examples
+| Type | Example | 
+| -------- | ------- |
 
 ## DigitizationArtefactZone
 ### 1. Definition
 DigitalArtefactZone: contains any types of item external to the document itself present on the image because of the digitisation process.
 ### 2. Subtypes
+None
 ### 3. Examples
+| Type | Example | 
+| -------- | ------- |
+| DigitizationArtefactZone | <img src="Images_annotation/digitalisationzone_bpt6k1092667h_f0.jpg"/> |
 
 
 ## DropCapitalZone
 ### 1.Definition
 DropCapitalZone: contains any type of initial letter occupying a space corresponding to several lines of the main text or bearing  significant ornementation, be they historiated, ornated, flourished or painted initials (and excluding the following text line).
 ### 2.Subtypes
+None
 ### 3. Examples
+| Type | Example | 
+| -------- | ------- |
+| DropCapitalZone (violet) | <img src="Images_annotation/dropcapital_rfeco_0769-0479_1986_num_1_1_1107_0110.jpg" width="300"/> |
 
 ## FigureZone
 ### 1.Definition
 FigureZone
 ### 2.Subtypes
 ### 3.Examples
+| Type | Example | 
+| -------- | ------- |
 
 ## GraphicZone
 ### 1. Definition
-GraphicZone: a zone containing any type of graphic element, from purely ornamental information to information consubstantial to the text (e.g. full-page paintings, line-fillers, marginal drawings, figures, etc.). Captions, if there are any, is part of this zone, and its text line is labelled HeadingLine. If an image contains text, it is possible to label the lines as DefaultLine.
+GraphicZone: a zone containing any type of graphic element, from purely ornamental information to information consubstantial to the text (e.g. full-page paintings, line-fillers, marginal drawings, figures, etc.). Captions and text contained by the image, if there are any, are part of this zone.
 ### 2. Subtypes
    Values used:
+   - GraphicZone:Head: GraphicZone's main caption (usually, in scientific paper, the part preceded by Figure X:)
+   - GraphicZone:FigDesc :GraphicZone's secondaries captions. A GraphicZone:FigDesc can only be present if a GraphicZone:Head has already been used. A GraphicZone:FigDesc encompasses secondary explanation (usually a small paragraph below a GraphicZone:Head) or serves as names for Part of the GraphicZone (a figure with two different plot and two plot titles on top of the main caption).
+   - GraphicZone:TextualContent: Text in an illustration which is not a caption. Usually a commentary and explanation on the illustration. When it is possible, the graphicZone:P is included in the principle GraphiZone.
    - GraphicZone:Part : a graphic element (photography, plot, etc...) defined as a sub-element of a GraphicZone containing at least one graphic (picture, schema, plot, etc.) and one element identifying it as a part of a whole (a GraphicZone:FigDesc or a NumberingZone)
    - GraphicZone:Decoration: a graphical element decorating the text, such as separator ornament.
-   - GraphicZone:Head: GraphicZone's main caption (usually, in scientific paper, the part preceded by Figure X:)
-   - GraphicZone:FigDesc :GraphicZone's secondaries captions. A GraphicZone:FigDesc can only be present if a GraphicZone:Head has already been used. A GraphicZone:FigDesc encompasses secondary explanation (usually a small paragraph below a GraphicZone:Head) or serves as names for Part of the `GraphicZone` (a figure with two different plot and two plot titles on top of the main caption).
-   - GraphicZone:Maths: Mathematical Formula separated from the main text. This doesn't apply to formula within the text. A GraphicZoneMaths can be associated with a GraphicZone:Legend.
-   - GraphicZone:TextualContent: Text in an illustration which is not a caption. Usually a commentary and explanation on the illustration. When it is possible, the graphicZone:P is included in the principle GraphiZone.
+   - GraphicZone:Maths: Mathematical Formula separated from the main text. This doesn't apply to formula within the text but can be used to described chemical formulas. A GraphicZoneMaths can be associated with a GraphicZone:Legend.
+
 ### 3. Examples
-graphiczone:maths
-<p class="float" align="center">
- <img src="Images_annotation/bpt6k1421246p_f358.jpg" width="400"/>
-</p>
-Example: bpt6k1421246p_f358.jpg
-
-Geometric Illustration are not GraphicZone:Maths but rather simple GraphicZone.
-
-<p class="float" align="center">
- <img src="Images_annotation/bd6t5371525p_f68.jpg" width="400"/>
-</p>
-Example :  bd6t5371525p_f68.jpg
-
-Graphiczone textualcontent
-
-<p class="float" align="center">
- <img src="Images_annotation/bd6t53682106_f109.jpg" width="400"/>
-</p>
-Example : bd6t53682106_f109.jpg
+| Type | Example | 
+| -------- | ------- |
+| GraphicZone | |
+| GraphicZone (brown)<br/> GraphicZone:head (grey) <br/> GraphicZone:FigDesc (orange) <br/> GraphicZone:TextualContent (text in green) | <img src="Images_annotation/graphiczone_head_text_these_2020STRAJ060_28.jpg" width="300"/> |
+| GraphicZone (brown) <br/> GraphicZone:head (grey) <br/> GraphicZone:Part (Light Brown) <br/> NumberingZone (number in white)| <img src="Images_annotation/graphizone_part_these_2019LIMO0084_48.jpg" width="300"/> |
 
 ## MainZone
 ### 1.Definition
