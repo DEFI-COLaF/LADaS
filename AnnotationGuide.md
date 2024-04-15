@@ -1,5 +1,5 @@
 # Annotation Guide
-This annotation guide primarily incorporates [Segmonto guidelines](https://segmonto.github.io), with some adjustments made to align with our documents, particularly regarding the subtypes.
+This annotation guide primarily incorporates [Segmonto guidelines](https://segmonto.github.io), with some adjustments made to align with our documents, particularly regarding the subtypes. When the zones are in Segmonto (all except AdvertisementZone and FigureZone), the description is from the Segmonto website.
 
 ## AdvertisementZone
 ### 1.Definition
