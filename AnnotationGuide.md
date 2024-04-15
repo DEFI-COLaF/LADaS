@@ -9,6 +9,8 @@ None
 ### 3.Examples
 | Type | Example | 
 | -------- | ------- |
+| AdvertisementZone (red) <br/> MainZone:P (dark blue) <br/> MainZone:P#Continued (light blue) | <img src="Images_annotation/Advertisement_magazineJV_1959_le-haut-parleur_1013_p41.jpg" width="300"/>|
+| AdvertisementZone (red) <br/> MainZone:P (dark blue) | <img src="Images_annotation/advertismenet_magazineJV_1992_abus-dangereux_1_p13.jpg" width="300"/>|
 
 ## DigitizationArtefactZone
 ### 1. Definition
@@ -19,6 +21,7 @@ None
 | Type | Example | 
 | -------- | ------- |
 | DigitizationArtefactZone | <img src="Images_annotation/digitalisationzone_bpt6k1092667h_f0.jpg"/> |
+| DigitalArtefactZone (orange) <br/> RunningTitleZone (pink) <br/> MainZone:P/P#Continued (blue/light blue)| <img src="Images_annotation/digital_these_2018USPCC269_215.png" width="400"/>
 
 
 ## DropCapitalZone
@@ -41,6 +44,7 @@ FigureZone contains screens of code, which can not be associated with graphicZon
 | Type | Example | 
 | -------- | ------- |
 | FigureZone (dark green)<br/> FigureZone:Head (middle green) <br/> FigureZone:FigDesc (light green - note) | <img src="Images_annotation/figurezone_magazineJV_1989_l-echo-du-pcw_33_p28.jpg" width="300"/>|
+| FigureZone (green) <br/> MainZone:P (blue) | <img src="Images_annotation/figurezone_magazineJV_1990_amiga-news-tech_11_p3.jpg" width="300"/>|
 
 ## GraphicZone
 ### 1. Definition
@@ -61,7 +65,9 @@ GraphicZone: a zone containing any type of graphic element, from purely ornament
 | GraphicZone (brown)<br/> GraphicZone:head (grey) <br/> GraphicZone:FigDesc (orange) <br/> GraphicZone:TextualContent (text in green) | <img src="Images_annotation/graphiczone_head_text_these_2020STRAJ060_28.jpg" width="300"/> |
 | GraphicZone (brown) | <img src="Images_annotation/bd6t5371525p_f68.jpg" width="300"/> |
 | GraphicZone (brown) <br/> GraphicZone:head (grey) <br/> GraphicZone:Part (Light Brown) <br/> NumberingZone (number in white)| <img src="Images_annotation/graphizone_part_these_2019LIMO0084_48.jpg" width="300"/> |
-| GraphicZone:Maths (grey) <br/> NumberingZone (red) <br/> MainZone:P (dark blue) <br/> MainZone:P (light blue) | <img src="Images_annotation/graphiczone_maths_bpt6k1421246p_f358.jpg" width="300"/> |
+| GraphicZone:Decoration (orange) <br/> MainZone:Head (yellow) | <img src="Images_annotation/graphizone_decoration_bd6t5369453m_f5.jpg.png" width="400"/> |
+| GraphicZone:Decoration (orange) <br/> MainZone:Head (yellow) | <img src="Images_annotation/graphizone_decoration_magazineJV_1958_le-haut-parleur_1005_p45.jpg" width="400"/>
+| GraphicZone:Maths (grey) <br/> NumberingZone (red) <br/> MainZone:P (dark blue) <br/> MainZone:P (light blue) | <img src="Images_annotation/graphiczone_maths_bpt6k1421246p_f358.jpg" width="400"/> |
 
 
 ## MainZone
@@ -87,23 +93,26 @@ MainZone is the main area containing the text, excluding any paratext, and it is
 | -------- | ------- |
 | MainZone:P | <img src="Images_annotation/mainzone_p_rao_0767-709x_1985_num_2_1_879_0115.jpg" width="300"/> |
 | MainZone:Lg | <img src="Images_annotation/mainzone_lg_bd6t5369982t_f43.jpg" width="300"/>|
+| MainZone:Sp | <img src="Images_annotation/mainzone_sp_bd6t53702879_f60.jpg.png" width="300"/>|
 | MainZone:List | <img src="Images_annotation/mainzone_list_abpo_0003-391x_1902_num_18_1_1144_0049.jpg" width="300"/> |
 | MainZone:Entry | <img src="Images_annotation/mainzone_entry_magazineJV_1939_l-amateur-radio_24_p25.jpg" width="300"/> |
 | MainZone: Entry | <img src="Images_annotation/mainzone_entry_bd6t5369916x_f31.png" width="300"/> |
 | MainZone:Form | <img src="Images_annotation/mainzone_form_magazineJV_1988_atari-1st_15_p18.jpg" width="400"/> |
 | MainZone:Head (yelllow) <br/> MainZone:Date (grey) <br/> MainZone:P (blue) | <img src="Images_annotation/mainzone_date_bd6t5377087m_f331.jpg" width="300"/> |
+| MainZone:Head (yelllow) <br/> MainZone:Signature (brown) <br/> MainZone:P (blue) | <img src="Images_annotation/mainzone_signature_magazineJV_1971_le-haut-parleur_1334_p45.jpg.png" width="300"/> |
+| MainZone:Head (yelllow) <br/> MainZone:Signature (brown) <br/> MainZone:P (blue) | <img src="Images_annotation/maiznone_signature_flang_1244-5460_1993_num_1_1_1034_0047.jpg.png" width="300"/>|
 
 ## MarginTextZone
 ### 1. Definition
 MarginTextZone: characterises any text zone contained in the margins no matter its position on the page (upper, lower, inner or outer), including the space between two columns. We do not differentiate the zone's particular semantic status (gloss, addition, correction, intertextual or bibliographic reference…).
 ### 2. Subtypes
-    - MarginTextZone:ManuscriptAddendum: A handwritten margin note.
-    - MarginTextZone:Notes, MarginTextZone:Notes#Continued: Footnotes and Margin Notes (not separated invidually). MarginTextZone:Notes#Continued is used when there are multiple columns of notes on the page.
+   - MarginTextZone:ManuscriptAddendum: A handwritten margin note.
+   - MarginTextZone:Notes, MarginTextZone:Notes#Continued: Footnotes and Margin Notes (not separated invidually). MarginTextZone:Notes#Continued is used when there are multiple columns of notes on the page.
 ### 3. Examples
 | Type | Example |
 | ---- | ------- |
 |MarginTextZone:Notes (light blue) <br/> MainZone:P (blue) <br/> GraphicZone (brown) | <img src="Images_annotation/bd6t53717102_f63.jpg" width="400"/> |
-|MarginTextZone:ManuscriptAddendum| |
+|MarginTextZone:ManuscriptAddendum| <img src="Images_annotation/manuscript_bd6t53696804_f1.jpg" width="300"/>|
 
 ## NumberingZone
 ### 1. Definition
@@ -126,6 +135,7 @@ PageTitleZone: characterises the entire page, rather than a section within a pag
 | Type | Example |
 | ---- | ------- |
 | PageTitleZone (yellow) <br/> StampZone (green) | <img src="Images_annotation/bd6t5372200f_f3.jpg" width="300"/> |
+| PageTitleZone:Index (Neon green) <br/> NumberingZone (red)<br/> RunningTitle (pink) <br/> Stamp (green)| <img src="Images_annotation/pagetitlezone_index_bd6t5369907z_f162.jpg" width="300"/>|
 
 ## QuireMarkZone
 ### 1. Definition
@@ -135,6 +145,8 @@ None
 ### 3. Examples
 | Type | Example |
 | ---- | ------- |
+| Quiremarks (dark blue) <br/> MainZone (blue) | <img src="Images_annotation/quiremarks_bd6t5369278k_f226.jpg.png" width="300"/>|
+| Quiremarks (blue) <br/> NumberingZone (red) <br/> MainZone:P#Continued (blue)</br>| <img src="Images_annotation/quiremarks_bd6t53693238_f75.jpg.png" width="300"/>|
 
 ## RunningTitleZone
 ### 1. Definition
@@ -154,6 +166,7 @@ StampZone: is a zone containing a stamp, be it a library stamp or a mark from a 
 ### 3. Examples
 | Type | Example |
 | ---- | ------- |
+|StampZone (green) <br/> StampZone:Sticker (brown) <br/> PageTitleZone (beige) | <img src="Images_annotation/sticker_bd6t53696804_f1.jpg.png" width="300"/>|
 
 ## TableZone
 ### 1.Definition
@@ -166,6 +179,7 @@ Caption should be included. If there is some text not contained by the graphical
 | ---- | ------- |
 | TableZone (middle blue) <br/> NumberingZone (red)<br/> MainZone:P (dark blue) <br/> MainZone:P#Continued (light blue) | <img src="Images_annotation/bd6t53701166_f31.jpg" width="300"/> |
 | TableZone (blue) | <img src="Images_annotation/tablezone_magazineJV_1988_apple-hebdo_37_p6.jpg" width="300"/> |
+| TableZone (dark blue) <br/> TableZone:Head (light blue) | <img src="Images_annotation/tablezone_head_these_1999LIL10006_105.jpg.png" width="300"/>|
 
 
 
