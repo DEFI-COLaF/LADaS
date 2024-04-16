@@ -3,7 +3,7 @@ This annotation guide primarily incorporates [Segmonto guidelines](https://segmo
 
 ## AdvertisementZone
 ### 1.Definition
-AdvertisementZone: corresponds to the advertisement areas, specific to printed materials, that combine both images and texts with sales objectives.This zone has been added within the framework of the LADAS project to the Segmonto vocabulary in order to address areas that are not solely images or solely text, but rather combine both elements to the extent that they are generally difficult to separate. 
+AdvertisementZone: corresponds to the advertisement areas, specific to printed materials, that combine both images and texts with sales objectives.This zone has been added within the framework of the LADAS project to the Segmonto vocabulary in order to address areas that are not solely images or solely text, but rather combine both elements to the extent that they are generally difficult to separate. The text in the AdvertisementZone features a strong typographic variety with large disparities, including variations in size, font, and color.
 ### 2.Subtypes
 None
 ### 3.Examples
@@ -36,7 +36,7 @@ None
 
 ## FigureZone
 ### 1.Definition
-FigureZone contains screens of code, which can not be associated with graphicZone:Maths or MainZone:P. It is readable by the machine and consists mostly of text.
+Figurezone corresponds to a frame containing textual elements defined by a title and/or a legend. It is used for screens of code.
 ### 2.Subtypes
    - FigureZone:Head: FigureZone's main caption
    - FigureZone:FigDesc: FigureZone's secondaries captions
@@ -53,7 +53,7 @@ GraphicZone: a zone containing any type of graphic element, from purely ornament
    Values used:
    - GraphicZone:Head: GraphicZone's main caption (usually, in scientific paper, the part preceded by Figure X:)
    - GraphicZone:FigDesc :GraphicZone's secondaries captions. A GraphicZone:FigDesc can only be present if a GraphicZone:Head has already been used. A GraphicZone:FigDesc encompasses secondary explanation (usually a small paragraph below a GraphicZone:Head) or serves as names for Part of the GraphicZone (a figure with two different plot and two plot titles on top of the main caption).
-   - GraphicZone:TextualContent: Text in an illustration which is not a caption. Usually a commentary and explanation on the illustration. When it is possible, the graphicZone:P is included in the principle GraphiZone.
+   - GraphicZone:TextualContent: Text in an illustration which is not a caption. Usually a commentary and explanation on the illustration. When it is possible, the GraphicZone:P is included in the principle GraphiZone.
    - GraphicZone:Part : a graphic element (photography, plot, etc...) defined as a sub-element of a GraphicZone containing at least one graphic (picture, schema, plot, etc.) and one element identifying it as a part of a whole (a GraphicZone:FigDesc or a NumberingZone)
    - GraphicZone:Decoration: a graphical element decorating the text, such as separator ornament.
    - GraphicZone:Maths: Mathematical Formula separated from the main text. This doesn't apply to formula within the text but can be used to described chemical formulas. A GraphicZoneMaths can be associated with a GraphicZone:Legend.
