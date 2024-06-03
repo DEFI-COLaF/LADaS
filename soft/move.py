@@ -49,6 +49,8 @@ def detect_subset(path) -> Tuple[str, bool]:
         return None
     elif "data-catalogue" in path:
         return "catalogue", True
+    elif "data-theatre-17e" in path:
+        return "theatre", True
 
 
 def process(path: str = "data-*/*/images/*.jpg", maps: Dict[str, Dict[str, str]] = None):
@@ -70,6 +72,7 @@ def process(path: str = "data-*/*/images/*.jpg", maps: Dict[str, Dict[str, str]]
         # Text Processing
         tgt_txt = rel_path(f"data/{subset}/{new_txt}")
         if remap:
+            os.makedirs(os.path.dirname(tgt_txt), exist_ok=True)
             rewrite(txt, tgt_txt, maps=maps[subset])
         else:
             os.makedirs(os.path.dirname(tgt_txt), exist_ok=True)
@@ -101,9 +104,10 @@ if __name__ == "__main__":
         'MainZone-CatalogueDesc': "MainZone-P",
         'MainZone-P-CatalogueDesc': "MainZone-P"
     }
+    # COLAF has the biggest coverage, so we draw the classes from it
     shutil.copy2(rel_path("data-colaf/data.yaml"), rel_path("data/data.yaml"))
     YAML_MAP = {
-        {"data-colaf": "COLAF", "data-catalogue": "catalogue"}[os.path.basename(p)]: parse_classes(p)
+        {"data-colaf": "COLAF", "data-catalogue": "catalogue", "data-theatre-17e": "theatre"}[os.path.basename(p)]: parse_classes(p)
         for p in glob.glob(rel_path("./data-*"))
     }
     for key, values in YAML_MAP.items():

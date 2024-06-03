@@ -11,7 +11,8 @@ def download():
 
     REQ = {
         "COLAF": 27,
-        "DATACATALOGUE": 9
+        "DATACATALOGUE": 9,
+        "THEATRE17": 1
     }
 
     # raise Exception
@@ -27,6 +28,12 @@ def download():
         rf = Roboflow(api_key=env.get("DATACATALOGUE"))
         project = rf.workspace("datacatalogue").project("macro-segmentation")
         dataset = project.version(REQ["DATACATALOGUE"]).download("yolov8", location=rel_path("data-catalogue"))
+
+    if REQ["THEATRE17"] != status["THEATRE17"]:
+        rf = Roboflow(api_key=env.get("THEATRE17"))
+        project = rf.workspace("theatreclassique").project("17e-siecle")
+        dataset = project.version(REQ["THEATRE17"]).download("yolov8", location=rel_path("data-theatre-17e"))
+
 
     with open(rel_path("status.yml"), "w") as f:
         yaml.dump(REQ, f)
