@@ -48,7 +48,7 @@ Figurezone corresponds to a frame containing textual elements defined by a title
 
 ## GraphicZone
 ### 1. Definition
-GraphicZone: a zone containing any type of graphic element, from purely ornamental information to information consubstantial to the text (e.g. full-page paintings, line-fillers, marginal drawings, figures, etc.). Captions and text contained by the image, if there are any, are part of this zone.
+GraphicZone: a zone containing any type of graphic element, from purely ornamental information to information consubstantial to the text (e.g. full-page paintings, line-fillers, marginal drawings, figures, etc.). Captions and text contained by the image, if there are any, are part of this zone. The elements contained in a graphicZone must be GraphicZone:Elements.
 ### 2. Subtypes
    Values used:
    - GraphicZone:Head: GraphicZone's main caption (usually, in scientific paper, the part preceded by Figure X:)
@@ -63,6 +63,8 @@ GraphicZone: a zone containing any type of graphic element, from purely ornament
 | -------- | ------- |
 | GraphicZone (brown) <br/> GraphicZone:head (red) <br/> GraphicZone:Figdesc (orange)| <img src="Images_annotation/graphizone_bd6t53682106_f109.jpg" width="300"/>|
 | GraphicZone (brown)<br/> GraphicZone:head (grey) <br/> GraphicZone:FigDesc (orange) <br/> GraphicZone:TextualContent (text in green) | <img src="Images_annotation/graphiczone_head_text_these_2020STRAJ060_28.jpg" width="300"/> |
+| GraphicZone (brown) <br/> GraphicZone:head (red) <br/> GraphicZone:FigDesc (pink) |<img src="Images_annotation/arasi_0004-3958_2004_num_59_1_T1_0073_0000.png" width="400"/>|
+| GraphicZone (brown) <br/> GraphicZone:head (red) <br/> GraphicZone:Legend (Credits/Red)| <img src="Images_annotation/aru_0180-930X_2007_num_103_1_T1_0064_0000.png" width="400"/>|
 | GraphicZone (brown) | <img src="Images_annotation/bd6t5371525p_f68.jpg" width="300"/> |
 | GraphicZone (brown) <br/> GraphicZone:head (grey) <br/> GraphicZone:Part (Light Brown) <br/> NumberingZone (number in white)| <img src="Images_annotation/graphizone_part_these_2019LIMO0084_48.jpg" width="300"/> |
 | GraphicZone:Decoration (orange) <br/> MainZone:Head (yellow) | <img src="Images_annotation/graphizone_decoration_bd6t5369453m_f5.jpg.png" width="400"/> |
@@ -97,10 +99,11 @@ MainZone is the main area containing the text, excluding any paratext, and it is
 | MainZone:List | <img src="Images_annotation/mainzone_list_abpo_0003-391x_1902_num_18_1_1144_0049.jpg" width="300"/> |
 | MainZone:Entry | <img src="Images_annotation/mainzone_entry_magazineJV_1939_l-amateur-radio_24_p25.jpg" width="300"/> |
 | MainZone: Entry | <img src="Images_annotation/mainzone_entry_bd6t5369916x_f31.png" width="300"/> |
+| MainZone:Entry (red) <br/> NumberingZone(red) <br/> Signature (dark purple) <br/> MainZone:P (green) <br/> RunningTitleZone (pink)| <img src="Images_annotation/assr_0003-9659_1958_num_5_1_T1_0182_0000.png" width="250"/>|
 | MainZone:Form | <img src="Images_annotation/mainzone_form_magazineJV_1988_atari-1st_15_p18.jpg" width="400"/> |
-| MainZone:Head (yelllow) <br/> MainZone:Date (grey) <br/> MainZone:P (blue) | <img src="Images_annotation/mainzone_date_bd6t5377087m_f331.jpg" width="300"/> |
-| MainZone:Head (yelllow) <br/> MainZone:Signature (brown) <br/> MainZone:P (blue) | <img src="Images_annotation/mainzone_signature_magazineJV_1971_le-haut-parleur_1334_p45.jpg.png" width="300"/> |
-| MainZone:Head (yelllow) <br/> MainZone:Signature (brown) <br/> MainZone:P (blue) | <img src="Images_annotation/maiznone_signature_flang_1244-5460_1993_num_1_1_1034_0047.jpg.png" width="300"/>|
+| MainZone:Head (yellow) <br/> MainZone:Date (grey) <br/> MainZone:P (blue) | <img src="Images_annotation/mainzone_date_bd6t5377087m_f331.jpg" width="300"/> |
+| MainZone:Head (yellow) <br/> MainZone:Signature (brown) <br/> MainZone:P (blue) | <img src="Images_annotation/mainzone_signature_magazineJV_1971_le-haut-parleur_1334_p45.jpg.png" width="300"/> |
+| MainZone:Head (yellow) <br/> MainZone:Signature (brown) <br/> MainZone:P (blue) | <img src="Images_annotation/maiznone_signature_flang_1244-5460_1993_num_1_1_1034_0047.jpg.png" width="300"/>|
 
 ## MarginTextZone
 ### 1. Definition
@@ -112,6 +115,7 @@ MarginTextZone: characterises any text zone contained in the margins no matter i
 | Type | Example |
 | ---- | ------- |
 |MarginTextZone:Notes (light blue) <br/> MainZone:P (blue) <br/> GraphicZone (brown) | <img src="Images_annotation/bd6t53717102_f63.jpg" width="400"/> |
+|MarginTextZone:Notes (light blue) <br/> MainZone:P (green) | <img src="Images_annotation/antaf_0066-4871_1985_num_21_1_T1_0215_0000.png" width="400"/>|
 |MarginTextZone:ManuscriptAddendum| <img src="Images_annotation/manuscript_bd6t53696804_f1.jpg" width="300"/>|
 
 ## NumberingZone
