@@ -94,6 +94,7 @@ MainZone is the main area containing the text, excluding any paratext, and it is
 | Type | Example | 
 | -------- | ------- |
 | MainZone:P | <img src="Images_annotation/mainzone_p_rao_0767-709x_1985_num_2_1_879_0115.jpg" width="300"/> |
+| MainZone:P (quote) | <img src="Images_annotation/asie_0766-1177_2002_num_13_1_T1_0272_0000.png" width="300"/>|
 | MainZone:Lg | <img src="Images_annotation/mainzone_lg_bd6t5369982t_f43.jpg" width="300"/>|
 | MainZone:Sp | <img src="Images_annotation/mainzone_sp_bd6t53702879_f60.jpg.png" width="300"/>|
 | MainZone:List | <img src="Images_annotation/mainzone_list_abpo_0003-391x_1902_num_18_1_1144_0049.jpg" width="300"/> |
