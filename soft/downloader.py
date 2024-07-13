@@ -3,6 +3,7 @@ from roboflow import Roboflow
 import yaml
 import pathlib
 from util import rel_path
+import os
 
 
 def download():
@@ -22,16 +23,19 @@ def download():
     if REQ["COLAF"] != status["COLAF"]:
         rf = Roboflow(api_key=env.get("COLAF"))
         project = rf.workspace("colaftextes").project("segmonto")
+        os.makedirs("data-colaf", exist_ok=True)
         dataset = project.version(REQ["COLAF"]).download("yolov8", location=rel_path("data-colaf"))
 
     if REQ["DATACATALOGUE"] != status["DATACATALOGUE"]:
         rf = Roboflow(api_key=env.get("DATACATALOGUE"))
         project = rf.workspace("datacatalogue").project("macro-segmentation")
+        os.makedirs("data-catalogue", exist_ok=True)
         dataset = project.version(REQ["DATACATALOGUE"]).download("yolov8", location=rel_path("data-catalogue"))
 
     if REQ["THEATRE17"] != status["THEATRE17"]:
         rf = Roboflow(api_key=env.get("THEATRE17"))
         project = rf.workspace("theatreclassique").project("17e-siecle")
+        os.makedirs("data-theatre-17e", exist_ok=True)
         dataset = project.version(REQ["THEATRE17"]).download("yolov8", location=rel_path("data-theatre-17e"))
 
 
