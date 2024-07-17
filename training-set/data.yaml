@@ -31,9 +31,9 @@ names:
 - MarginTextZone-Notes
 - MarginTextZone-Notes-Continued
 - NumberingZone
-- PageTitleZone
-- PageTitleZone-Index
-- QuireMarkZone
+- TitlePageZone
+- TitlePageZone-Index
+- QuireMarksZone
 - RunningTitleZone
 - StampZone
 - StampZone-Sticker

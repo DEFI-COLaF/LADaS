@@ -102,22 +102,31 @@ def parse_classes(folder: str) -> Tuple[str, ...]:
 if __name__ == "__main__":
     OTHER_MAP = {
         'MainZone-CatalogueDesc': "MainZone-P",
-        'MainZone-P-CatalogueDesc': "MainZone-P"
+        'MainZone-P-CatalogueDesc': "MainZone-P",
+        "PageTitleZone": "TitlePageZone",
+        "PageTitleZone-Index": "TitlePageZone-Index",
+        "QuireMarkZone": "QuireMarksZone",
+        "MainZone-Incipit": "MainZone-P"
     }
     # COLAF has the biggest coverage, so we draw the classes from it
-    shutil.copy2(rel_path("data-colaf/data.yaml"), rel_path("data/data.yaml"))
+    # We now use a standardized Element in MAIN_MAP
+    MAIN_MAP = parse_classes("./training-set")
+    # Then we parse other maps
     YAML_MAP = {
-        {"data-colaf": "COLAF", "data-catalogue": "catalogue", "data-theatre-17e": "theatre"}[os.path.basename(p)]: parse_classes(p)
+        {
+            "data-colaf": "COLAF", 
+            "data-catalogue": "catalogue", 
+            "data-theatre-17e": "theatre"
+        }[os.path.basename(p)]: parse_classes(p)
         for p in glob.glob(rel_path("./data-*"))
     }
+
     for key, values in YAML_MAP.items():
-        if key == "COLAF":
-            continue
         YAML_MAP[key] = {
             str(idx): str(
-                YAML_MAP["COLAF"].index(OTHER_MAP.get(cls, cls))
-                if OTHER_MAP.get(cls, cls) in YAML_MAP["COLAF"]
-                else -1
+                MAIN_MAP.index(OTHER_MAP.get(cls, cls))
+                if OTHER_MAP.get(cls, cls) in MAIN_MAP
+                else (print(f"Missing zone translation for {cls}") or -1)
             )
             for idx, cls in enumerate(values)
         }
