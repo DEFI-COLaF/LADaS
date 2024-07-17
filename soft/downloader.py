@@ -3,10 +3,10 @@ from roboflow import Roboflow
 import yaml
 import pathlib
 from util import rel_path
+import sys
 import os
 
-
-def download():
+def download(force=False):
     with open(rel_path("status.yml")) as f:
         status = yaml.safe_load(f)
 
@@ -20,23 +20,23 @@ def download():
     env = DotEnv(rel_path(".env"))
 
     # Download COLaF
-    if REQ["COLAF"] != status["COLAF"]:
+    if force or REQ["COLAF"] != status["COLAF"]:
         rf = Roboflow(api_key=env.get("COLAF"))
         project = rf.workspace("colaftextes").project("segmonto")
         os.makedirs("data-colaf", exist_ok=True)
-        dataset = project.version(REQ["COLAF"]).download("yolov8", location=rel_path("data-colaf"))
+        dataset = project.version(REQ["COLAF"]).download("yolov8", location=rel_path("data-colaf"), overwrite=True)
 
-    if REQ["DATACATALOGUE"] != status["DATACATALOGUE"]:
+    if force or REQ["DATACATALOGUE"] != status["DATACATALOGUE"]:
         rf = Roboflow(api_key=env.get("DATACATALOGUE"))
         project = rf.workspace("datacatalogue").project("macro-segmentation")
         os.makedirs("data-catalogue", exist_ok=True)
-        dataset = project.version(REQ["DATACATALOGUE"]).download("yolov8", location=rel_path("data-catalogue"))
+        dataset = project.version(REQ["DATACATALOGUE"]).download("yolov8", location=rel_path("data-catalogue"), overwrite=True)
 
-    if REQ["THEATRE17"] != status["THEATRE17"]:
+    if force or REQ["THEATRE17"] != status["THEATRE17"]:
         rf = Roboflow(api_key=env.get("THEATRE17"))
         project = rf.workspace("theatreclassique").project("17e-siecle")
         os.makedirs("data-theatre-17e", exist_ok=True)
-        dataset = project.version(REQ["THEATRE17"]).download("yolov8", location=rel_path("data-theatre-17e"))
+        dataset = project.version(REQ["THEATRE17"]).download("yolov8", location=rel_path("data-theatre-17e"), overwrite=True)
 
 
     with open(rel_path("status.yml"), "w") as f:
@@ -44,4 +44,8 @@ def download():
 
 
 if __name__ == "__main__":
-    download()
+    print(sys.argv)
+    if "--force" in sys.argv:
+        download(force=True)
+    else:
+        download()

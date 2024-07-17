@@ -44,6 +44,10 @@ def detect_subset(path) -> Tuple[str, bool]:
             return "these", False
         elif re.match("^(PG).*$", bname):
             return "others", False
+        elif re.match("^Tapuscrit.*$", bname):
+            return "typewriter", False
+        elif re.match("^Picard_Concours.*$", bname):
+            return "picard", False
         else:
             return "persee", False
         return None
