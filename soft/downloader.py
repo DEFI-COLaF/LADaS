@@ -11,7 +11,7 @@ def download(force=False):
         status = yaml.safe_load(f)
 
     REQ = {
-        "COLAF": 27,
+        "COLAF": 28,
         "DATACATALOGUE": 9,
         "THEATRE17": 5
     }

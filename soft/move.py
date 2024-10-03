@@ -48,6 +48,8 @@ def detect_subset(path) -> Tuple[str, bool]:
             return "typewriter", False
         elif re.match("^Picard_Concours.*$", bname):
             return "picard", False
+        elif re.match("^(20\d\d|19\d\d)[A-Z]{3,4}\d+_\d+.*$", bname):
+            return "these", False
         else:
             return "persee", False
         return None
