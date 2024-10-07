@@ -35,28 +35,28 @@ def detect_subset(path) -> Tuple[str, bool]:
     bname = os.path.basename(path)
     if "data-colaf" in path:
         if bname.startswith("magazineJV"):
-            return "magazine-tech", False
+            return "magazine-tech", "COLAF"
         elif bname.startswith("finger"):
-            return "fingers", False
+            return "fingers", "COLAF"
         elif re.match("^(bpt6|bd6t).*$", bname):
-            return "monographies", False
+            return "monographies", "COLAF"
         elif re.match("^these_.*$", bname):
-            return "these", False
+            return "these", "COLAF"
         elif re.match("^(PG).*$", bname):
-            return "others", False
+            return "others", "COLAF"
         elif re.match("^Tapuscrit.*$", bname):
-            return "typewriter", False
+            return "typewriter", "COLAF"
         elif re.match("^Picard_Concours.*$", bname):
-            return "picard", False
+            return "picard", "COLAF"
         elif re.match("^(20\d\d|19\d\d)[A-Z]{3,4}\d+_\d+.*$", bname):
-            return "these", False
+            return "these", "COLAF"
         else:
-            return "persee", False
+            return "persee", "COLAF"
         return None
     elif "data-catalogue" in path:
-        return "catalogue", True
+        return "catalogue", "datacatalogue"
     elif "data-theatre-17e" in path:
-        return "theatre", True
+        return "theatre", "theatre17"
 
 
 def process(path: str = "data-*/*/images/*.jpg", maps: Dict[str, Dict[str, str]] = None):
@@ -67,7 +67,7 @@ def process(path: str = "data-*/*/images/*.jpg", maps: Dict[str, Dict[str, str]]
         new_jpg = "/".join(rename(file).split("/")[-3:])
         txt = file.replace("images/", "labels/").replace(".jpg", ".txt")
         new_txt = "/".join(rename(txt).split("/")[-3:])
-        subset, remap = detect_subset(file)
+        subset, mapname = detect_subset(file)
         counter[subset] += 1
 
         # JPG Processing
@@ -77,12 +77,8 @@ def process(path: str = "data-*/*/images/*.jpg", maps: Dict[str, Dict[str, str]]
 
         # Text Processing
         tgt_txt = rel_path(f"data/{subset}/{new_txt}")
-        if remap:
-            os.makedirs(os.path.dirname(tgt_txt), exist_ok=True)
-            rewrite(txt, tgt_txt, maps=maps[subset])
-        else:
-            os.makedirs(os.path.dirname(tgt_txt), exist_ok=True)
-            shutil.copy2(txt, tgt_txt)
+        os.makedirs(os.path.dirname(tgt_txt), exist_ok=True)
+        rewrite(txt, tgt_txt, maps=maps[mapname])
     return files
 
 
@@ -131,8 +127,8 @@ if __name__ == "__main__":
     YAML_MAP = {
         {
             "data-colaf": "COLAF", 
-            "data-catalogue": "catalogue", 
-            "data-theatre-17e": "theatre"
+            "data-catalogue": "datacatalogue", 
+            "data-theatre-17e": "theatre17"
         }[os.path.basename(p)]: parse_classes(p)
         for p in glob.glob(rel_path("./data-*"))
     }
