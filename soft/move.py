@@ -112,7 +112,17 @@ if __name__ == "__main__":
         "PageTitleZone": "TitlePageZone",
         "PageTitleZone-Index": "TitlePageZone-Index",
         "QuireMarkZone": "QuireMarksZone",
-        "MainZone-Incipit": "MainZone-P"
+        "MainZone-Incipit": "MainZone-P",
+        "MainZone-List": "MainZone-ListItem",
+        # Merging Continued
+        "MainZone-Entry-Continued": "MainZone-Continued",
+        "MainZone-Lg-Continued": "MainZone-Continued",
+        "MainZone-List-Continued": "MainZone-Continued",
+        "MainZone-P-Continued": "MainZone-Continued",
+        "MainZone-Sp-Continued": "MainZone-Continued",
+        "MarginTextZone-Notes-Continued": "MarginTextZone-ContinuedNotes",
+        # We stop merging TableZone
+        "TableZone-Continued": "TableZone"
     }
     # COLAF has the biggest coverage, so we draw the classes from it
     # We now use a standardized Element in MAIN_MAP
