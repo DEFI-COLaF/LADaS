@@ -57,6 +57,8 @@ def detect_subset(path) -> Tuple[str, bool]:
         return "catalogue", "datacatalogue"
     elif "data-theatre-17e" in path:
         return "theatre", "theatre17"
+    elif "data-ong" in path:
+        return "administrative-report", "administrative-report"
 
 
 def process(path: str = "data-*/*/images/*.jpg", maps: Dict[str, Dict[str, str]] = None):
@@ -84,10 +86,14 @@ def process(path: str = "data-*/*/images/*.jpg", maps: Dict[str, Dict[str, str]]
 
 def rewrite(source: str, target: str, maps: Dict[str, str]):
     data = []
-    with open(source) as f:
-        for line in f:
-            idx, *pts = line.strip().split()
-            data.append([maps[idx], *pts])
+    try:
+        with open(source) as f:
+            for line in f:
+                idx, *pts = line.strip().split()
+                data.append([maps[idx], *pts])
+    except Exception as E:
+        print(f"Error processing {source}")
+        raise E
     with open(target, "w") as f:
         f.write("\n".join([
             " ".join(line)
@@ -128,19 +134,33 @@ if __name__ == "__main__":
         {
             "data-colaf": "COLAF", 
             "data-catalogue": "datacatalogue", 
-            "data-theatre-17e": "theatre17"
+            "data-theatre-17e": "theatre17",
+            "data-ong": "administrative-report"
         }[os.path.basename(p)]: parse_classes(p)
         for p in glob.glob(rel_path("./data-*"))
     }
 
+    # For every external set, we get the list of classes with their IDX
     for key, values in YAML_MAP.items():
-        YAML_MAP[key] = {
-            str(idx): str(
-                MAIN_MAP.index(OTHER_MAP.get(cls, cls))
-                if OTHER_MAP.get(cls, cls) in MAIN_MAP
-                else (print(f"Missing zone translation for {cls}") or -1)
-            )
-            for idx, cls in enumerate(values)
-        }
+        # For this YAML MAP
+        YAML_MAP[key] = {}
+        for idx, orig_cls in enumerate(values):
+            mapped_id = -1
+            cls = orig_cls
+            # We check if it does not contain a forbidden char
+            if ":" in cls or "#" in cls:
+                cls = cls.replace(":", "-").replace("#", "-")
+
+            # We first check its not in our values for global translations
+            if cls in OTHER_MAP:
+                cls = OTHER_MAP[cls]
+
+            # Then, we look for the index of this label in the MAP of the training set
+            if cls in MAIN_MAP:
+                mapped_id = MAIN_MAP.index(cls)
+                # We save this translation
+                YAML_MAP[key][str(idx)] = str(mapped_id)
+            else:
+                print(f"Translation not found for `{orig_cls}` (=> `{cls}`)")
 
     process(maps=YAML_MAP)
