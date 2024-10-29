@@ -48,11 +48,14 @@ def detect_subset(path) -> Tuple[str, bool]:
             return "others", "COLAF"
         elif re.match("^Tapuscrit.*$", bname):
             return "typewriter", "COLAF"
+        elif re.match("^catalog_.*$", bname):
+            return "catalogue", "COLAF"
         elif re.match("^Picard_Concours.*$", bname):
             return "picard", "COLAF"
         elif re.match("^(20\d\d|19\d\d)[A-Z]{3,4}\d+_\d+.*$", bname):
             return "these", "COLAF"
         else:
+            print(path)
             return "persee", "COLAF"
         return None
     elif "data-catalogue" in path:
