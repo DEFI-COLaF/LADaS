@@ -34,6 +34,8 @@ def detect_subset(path) -> Tuple[str, bool]:
     """
     bname = os.path.basename(path)
     if "data-colaf" in path:
+        if bname.startswith("theatre_"):
+            return "theatre", "COLAF"
         if bname.startswith("magazineJV"):
             return "magazine-tech", "COLAF"
         elif bname.startswith("finger"):
