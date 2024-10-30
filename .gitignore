@@ -1,3 +1,4 @@
+*.cache
 *.tar.gz
 *.model
 lightning_logs/

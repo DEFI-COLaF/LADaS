@@ -13,6 +13,9 @@ import re
 regex = re.compile(r"(_[a-z]+)$")
 
 
+IGNORE = ["MusicZone"]
+
+
 def rename(path: str) -> str:
     new = path.split(".rf.")[0]
     if "images/" in path:
@@ -55,7 +58,6 @@ def detect_subset(path) -> Tuple[str, bool]:
         elif re.match("^(20\d\d|19\d\d)[A-Z]{3,4}\d+_\d+.*$", bname):
             return "these", "COLAF"
         else:
-            print(path)
             return "persee", "COLAF"
         return None
     elif "data-catalogue" in path:
@@ -95,6 +97,9 @@ def rewrite(source: str, target: str, maps: Dict[str, str]):
         with open(source) as f:
             for line in f:
                 idx, *pts = line.strip().split()
+                if idx not in maps:  # If it was not mapped
+                    print(f"Ignoring ID {idx} for {source}")
+                    continue
                 data.append([maps[idx], *pts])
     except Exception as E:
         print(f"Error processing {source}")
@@ -149,6 +154,8 @@ if __name__ == "__main__":
     for key, values in YAML_MAP.items():
         # For this YAML MAP
         YAML_MAP[key] = {}
+        _remaped = {}
+        import pprint
         for idx, orig_cls in enumerate(values):
             mapped_id = -1
             cls = orig_cls
@@ -159,13 +166,18 @@ if __name__ == "__main__":
             # We first check its not in our values for global translations
             if cls in OTHER_MAP:
                 cls = OTHER_MAP[cls]
+                #print(f"Translation found for `{orig_cls}` (=> `{cls}`)")
 
             # Then, we look for the index of this label in the MAP of the training set
             if cls in MAIN_MAP:
                 mapped_id = MAIN_MAP.index(cls)
                 # We save this translation
                 YAML_MAP[key][str(idx)] = str(mapped_id)
+                #print(f"{orig_cls} (Trad {cls}) goes from {idx} to {mapped_id} = {MAIN_MAP[mapped_id]})")
             else:
                 print(f"Translation not found for `{orig_cls}` (=> `{cls}`)")
+            _remaped[orig_cls] = cls
+        #print(_remaped)
+        #raise Exception
 
     process(maps=YAML_MAP)
