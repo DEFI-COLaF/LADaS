@@ -2,6 +2,7 @@
 *.tar.gz
 *.model
 lightning_logs/
+.config.yaml
 data-*
 
 # Byte-compiled / optimized / DLL files
