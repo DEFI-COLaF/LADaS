@@ -1,11 +1,3 @@
-#!/bin/sh
-
-mkdir -p training-set/test training-set/train training-set/valid
-cp -r data/*/train/* ./training-set/train
-cp -r data/*/valid/* ./training-set/valid
-cp -r data/*/test/* ./training-set/test
-
-
 #!/bin/bash
 
 # List of subdirectories to exclude
@@ -20,6 +12,11 @@ test_target="./training-set/test"
 rm -rf "$train_target" "$valid_target" "$test_target"
 # Create target directories if they don't exist
 mkdir -p "$train_target" "$valid_target" "$test_target"
+
+# Add images and labels
+for subset in train valid test; do
+	mkdir -p "$PWD/training-set/$subset/images" "$PWD/training-set/$subset/labels";
+done
 
 # Function to check if a directory is in the exclude list
 is_excluded() {
@@ -42,13 +39,13 @@ for folder in data/*; do
     # Create symbolic links for train, valid, and test subfolders if they exist
     for subset in train valid test; do
         if [[ -d "$folder/$subset/images" ]]; then
-            ln -s "$PWD/$folder/$subset/images" "$PWD/$train_target/"
-            echo "Linked $folder/$subset/images to $train_target"
+            ln -s $PWD/$folder/$subset/images/* $PWD/training-set/$subset/images/
+            echo "Linked $folder/$subset/images to $PWD/training-set/$subset/images/"
         fi
 
         if [[ -d "$folder/$subset/labels" ]]; then
-            ln -s "$PWD/$folder/$subset/labels" "$PWD/$train_target/"
-            echo "Linked $folder/$subset/labels to $train_target"
+            ln -s $PWD/$folder/$subset/labels/*.txt $PWD/training-set/$subset/labels/
+            echo "Linked $folder/$subset/labels to $PWD/training-set/$subset/labels/"
         fi
     done
 done
