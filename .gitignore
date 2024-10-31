@@ -4,6 +4,8 @@
 lightning_logs/
 .config.yaml
 data-*
+training-set-single
+submodels
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
