@@ -10,7 +10,7 @@ import glob
 import tqdm
 import re
 
-regex = re.compile(r"(_[a-z]+)$")
+regex = re.compile(r"(_[a-zA-Z]+)$")
 
 
 IGNORE = ["MusicZone"]
@@ -66,6 +66,8 @@ def detect_subset(path) -> Tuple[str, bool]:
         return "theatre", "theatre17"
     elif "data-ong" in path:
         return "administrative-report", "administrative-report"
+    elif "data-romans" in path:
+        return "romans-19", "romans"
 
 
 def process(path: str = "data-*/*/images/*.jpg", maps: Dict[str, Dict[str, str]] = None):
@@ -145,6 +147,7 @@ if __name__ == "__main__":
             "data-colaf": "COLAF", 
             "data-catalogue": "datacatalogue", 
             "data-theatre-17e": "theatre17",
+            "data-romans": "romans",
             "data-ong": "administrative-report"
         }[os.path.basename(p)]: parse_classes(p)
         for p in glob.glob(rel_path("./data-*"))

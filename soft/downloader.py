@@ -13,7 +13,8 @@ def download(force=False):
     REQ = {
         "COLAF": 31,
         "DATACATALOGUE": 12,
-        "THEATRE17": 5
+        "THEATRE17": 5,
+        "ROMANS": 1
     }
 
     # raise Exception
@@ -37,6 +38,12 @@ def download(force=False):
         project = rf.workspace("theatreclassique").project("17e-siecle")
         os.makedirs("data-theatre-17e", exist_ok=True)
         dataset = project.version(REQ["THEATRE17"]).download("yolov8", location=rel_path("data-theatre-17e"), overwrite=True)
+
+    if force or REQ["ROMANS"] != status["ROMANS"]:
+        rf = Roboflow(api_key=env.get("THEATRE17"))
+        project = rf.workspace("theatreclassique").project("romans-rygbh")
+        os.makedirs("data-romans", exist_ok=True)
+        dataset = project.version(REQ["ROMANS"]).download("yolov8", location=rel_path("data-romans"), overwrite=True)
 
 
     with open(rel_path("status.yml"), "w") as f:
