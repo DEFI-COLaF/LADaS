@@ -128,6 +128,8 @@ if __name__ == "__main__":
         "QuireMarkZone": "QuireMarksZone",
         "MainZone-Incipit": "MainZone-P",
         "MainZone-List": "MainZone-ListItem",
+        "MainZone-Form": "FormZone",
+        "GraphicZone-Maths": "MainZone-Maths",
         # Merging Continued
         "MainZone-Entry-Continued": "MainZone-Continued",
         "MainZone-Lg-Continued": "MainZone-Continued",
