@@ -4,6 +4,11 @@ This annotation guide primarily incorporates [Segmonto guidelines](https://segmo
 ## AdvertisementZone
 ### 1.Definition
 AdvertisementZone: corresponds to the advertisement areas, specific to printed materials, that combine both images and texts with sales objectives.This zone has been added within the framework of the LADAS project to the Segmonto vocabulary in order to address areas that are not solely images or solely text, but rather combine both elements to the extent that they are generally difficult to separate. The text in the AdvertisementZone features a strong typographic variety with large disparities, including variations in size, font, and color.
+<!--
+Définition à retravailler. Certaines zones sont sémantiquement des pubs mais n'ont pas un aspect d'advertisementzone. (exemple:19_dictionnaire_bpt6k165979m_f23.jpg) auquel cas, à annoter avec Head, P, table.... 
+Exemple type: magazineJV_1950_le-haut-parleur_0881_p26.jpg advertisement quand il y a une image et qu'il n'est pas diviser l'image du texte
+Annoter le contenu interne à la zone.
+-->
 ### 2.Subtypes
 None
 ### 3.Examples
@@ -15,6 +20,7 @@ None
 ## DigitizationArtefactZone
 ### 1. Definition
 DigitalArtefactZone: contains any types of item external to the document itself present on the image because of the digitisation process.
+<!--Quelle annotation => juste la zone ou toute la partie du bas?-->
 ### 2. Subtypes
 None
 ### 3. Examples
@@ -27,6 +33,7 @@ None
 ## DropCapitalZone
 ### 1.Definition
 DropCapitalZone: contains any type of initial letter occupying a space corresponding to several lines of the main text or bearing  significant ornementation, be they historiated, ornated, flourished or painted initials (and excluding the following text line).
+
 ### 2.Subtypes
 None
 ### 3. Examples
@@ -37,6 +44,7 @@ None
 ## FigureZone
 ### 1.Definition
 Figurezone corresponds to a frame containing textual elements defined by a title and/or a legend. It is used for screens of code.
+<!--Structure très particulière de type screen = grand espaces vides avec du code-->
 ### 2.Subtypes
    - FigureZone:Head: FigureZone's main caption
    - FigureZone:FigDesc: FigureZone's secondaries captions
@@ -51,12 +59,15 @@ Figurezone corresponds to a frame containing textual elements defined by a title
 GraphicZone: a zone containing any type of graphic element, from purely ornamental information to information consubstantial to the text (e.g. full-page paintings, line-fillers, marginal drawings, figures, etc.). Captions and text contained by the image, if there are any, are part of this zone. The elements contained in a graphicZone must be GraphicZone:Elements.
 ### 2. Subtypes
    Values used:
-   - GraphicZone:Head: GraphicZone's main caption (usually, in scientific paper, the part preceded by Figure X:)
+   - GraphicZone:Head: GraphicZone's main caption (usually, in scientific paper, the part preceded by Figure X)
+   <!--A englober dans la zone contre exemple: 2010NAN21010_221.jpg-->
    - GraphicZone:FigDesc :GraphicZone's secondaries captions. A GraphicZone:FigDesc can only be present if a GraphicZone:Head has already been used. A GraphicZone:FigDesc encompasses secondary explanation (usually a small paragraph below a GraphicZone:Head) or serves as names for Part of the GraphicZone (a figure with two different plot and two plot titles on top of the main caption).
+   <!-- Bon exemple: 2011LAROS330_132.jpg à utiliser que quand il y a des part et une numérotation ou un titre différent. Supprimer le secondary explanation-->
    - GraphicZone:TextualContent: Text in an illustration which is not a caption. Usually a commentary and explanation on the illustration. When it is possible, the GraphicZone:P is included in the principle GraphiZone.
    - GraphicZone:Part : a graphic element (photography, plot, etc...) defined as a sub-element of a GraphicZone containing at least one graphic (picture, schema, plot, etc.) and one element identifying it as a part of a whole (a GraphicZone:FigDesc or a NumberingZone)
    - GraphicZone:Decoration: a graphical element decorating the text, such as separator ornament.
    - GraphicZone:Maths: Mathematical Formula separated from the main text. This doesn't apply to formula within the text but can be used to described chemical formulas. A GraphicZoneMaths can be associated with a GraphicZone:Legend.
+   <!--A mettre dans FigureZone-->
 
 ### 3. Examples
 | Type | Example | 
