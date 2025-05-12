@@ -62,6 +62,8 @@ def detect_subset(path) -> Tuple[str, bool]:
         return None
     elif "data-catalogue" in path:
         return "catalogue", "datacatalogue"
+    elif "data-textent" in path:
+        return "theatre", "COLAF"
     elif "data-theatre-17e" in path:
         return "theatre", "theatre17"
     elif "data-ong" in path:
@@ -150,7 +152,8 @@ if __name__ == "__main__":
             "data-catalogue": "datacatalogue", 
             "data-theatre-17e": "theatre17",
             "data-romans": "romans",
-            "data-ong": "administrative-report"
+            "data-ong": "administrative-report",
+            "data-textent": "COLAF"
         }[os.path.basename(p)]: parse_classes(p)
         for p in glob.glob(rel_path("./data-*"))
     }
