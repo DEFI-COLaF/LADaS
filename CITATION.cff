@@ -28,6 +28,10 @@ authors:
     family-names: Langlais
     affiliation: 'Paris-Sorbonne'
     orcid: 'https://orcid.org/0000-0001-9035-1127'
+  - given-names: Simon
+    family-names: Gabay
+    affiliation: 'University of Geneva'
+    orcid: 'https://orcid.org/0000-0001-9094-4475'
   - given-names: Laurent
     family-names: Romary
     affiliation: 'ALMAnaCH, Inria'

@@ -44,6 +44,10 @@ A script, `collate.sh` allows for having a single directory with train/dev/test 
 
 See the CITATION.CFF file
 
+## Funding 
+
+Data production has been funded by the DEFI Inria COLaF _Corpus et Outils pour les Langues de France_ and the FNS-Spark project [N°220833](https://data.snf.ch/grants/grant/220833).
+
 ## Contact
 
 Thibault Clérice ( th[a-z]+.cle[a-z]+ [at] inria.fr)
