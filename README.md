@@ -36,6 +36,12 @@ The data can be found in `./data`. Each subset is present in its own subset fold
 
 A script, `collate.sh` allows for having a single directory with train/dev/test folders for YoloV8 training.
 
+## Partners
+|Funding|Project|Comment|
+|---|---|---|
+|<img src="figures/inria.png" width="100"/>|<img src="figures/colaf.png" width="100"/>|Originally established and funded as part of the DEFI COLaF (2023–2027).|
+|<img src="figures/eu.webp" width="100"/>|<img src="figures/atrium.png" width="100"/>|Funded by the European Union under Grant Agreement n. 101132163. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them. |
+
 ## Licence
 
 ![68747470733a2f2f692e6372656174697665636f6d6d6f6e732e6f72672f6c2f62792f322e302f38387833312e706e67](https://user-images.githubusercontent.com/56683417/115525743-a78d2400-a28f-11eb-8e45-4b6e3265a527.png)
