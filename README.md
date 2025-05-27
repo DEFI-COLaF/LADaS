@@ -41,6 +41,7 @@ A script, `collate.sh` allows for having a single directory with train/dev/test 
 |---|---|---|
 |<img src="figures/inria.png" width="100"/>|<img src="figures/colaf.png" width="100"/>|Originally established and funded as part of the DEFI COLaF (2023–2027).|
 |<img src="figures/eu.webp" width="100"/>|<img src="figures/atrium.png" width="100"/>|Funded by the European Union under Grant Agreement n. 101132163. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them. |
+|<img src="figures/fns.png" width="100"/>|The Geographic Horizon of writers|Funded by FNS-Spark project [N°220833](https://data.snf.ch/grants/grant/220833). |
 
 ## Licence
 
