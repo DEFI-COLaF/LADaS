@@ -1,7 +1,9 @@
 # Layout Analysis Dataset with SegmOnto (LADaS)
 
 [![DOI](https://zenodo.org/badge/726002822.svg)](https://zenodo.org/doi/10.5281/zenodo.10682623) [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
+
 This repository is not maintain anymore. For the LADaS dataset, please go [here](https://github.com/DEFI-COLaF/LADAS2).
+
 LADaS, created by the [ALMANaCH team-project](https://almanach.inria.fr/index-en.html) at Inria,
 continued in partnership with other researchers, is a multidocuments diachronic layout analysis 
 dataset. This dataset includes:
